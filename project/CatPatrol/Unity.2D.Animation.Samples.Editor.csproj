@@ -606,29 +606,35 @@
  <Reference Include="Boo.Lang">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.24f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Edwina/Documents/GitHub/GDP-New-Rep/cat-patrol/project/CatPatrol/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Edwina/Documents/GitHub/GDP-New-Rep/cat-patrol/project/CatPatrol/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Animation.Editor">
- <HintPath>C:/Users/Edwina/Documents/GitHub/GDP-New-Rep/cat-patrol/project/CatPatrol/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Animation.Runtime">
- <HintPath>C:/Users/Edwina/Documents/GitHub/GDP-New-Rep/cat-patrol/project/CatPatrol/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/Edwina/Documents/GitHub/GDP-New-Rep/cat-patrol/project/CatPatrol/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/Edwina/Documents/GitHub/GDP-New-Rep/cat-patrol/project/CatPatrol/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{A8110D7F-FE6A-418A-C9F6-3AC40D663FE3}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Editor.csproj">
+      <Project>{D89E0F05-0678-F58B-8CFE-2970B0BFF3B3}</Project>
+      <Name>Unity.2D.Animation.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.csproj">
+      <Project>{7B2D7F7D-A660-673F-3449-41DD6688C51F}</Project>
+      <Name>Unity.2D.Animation.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Samples.Runtime.csproj">
       <Project>{BABADC52-E751-79AA-10A5-D88F4C163A17}</Project>
       <Name>Unity.2D.Animation.Samples.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.TestRunner.csproj">
+      <Project>{07A0D499-26E7-CAB9-6EBB-51922B0DB47A}</Project>
+      <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{F6D8819B-B35F-5EBC-098F-A9E35CB96419}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
