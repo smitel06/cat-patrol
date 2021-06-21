@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class cat : MonoBehaviour
 {
+    public GameObject gameManager;
     public string clickMessage;
     //text object
     public Text catFound;
@@ -29,7 +30,7 @@ public class cat : MonoBehaviour
         }
     }
 
-    public void DisplayMessage()
+    public void clicked()
     {
         //set text to click message
         catFound.text = clickMessage;
@@ -37,6 +38,7 @@ public class cat : MonoBehaviour
         catFound.enabled = true;
         //set wait time 
         waitTime = Time.time + timeToWait;
+        gameManager.SendMessage("AddToScore");
         
     }
 }

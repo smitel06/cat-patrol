@@ -79,7 +79,7 @@ public class player : MonoBehaviour
                 if(hit.collider.gameObject.tag == "clickable")
                 {
                     //activate click message
-                    hit.collider.gameObject.SendMessage("DisplayMessage");
+                    hit.collider.gameObject.SendMessage("clicked");
                 }
             }
         }
