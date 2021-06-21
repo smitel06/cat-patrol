@@ -14,6 +14,8 @@ public class player : MonoBehaviour
     bool facingLeft = false;
     //set max speed
     public float maxSpeed = 10;
+    //buildings
+    public GameObject buildings;
 
 
     // Start is called before the first frame update
@@ -42,6 +44,8 @@ public class player : MonoBehaviour
                 facingLeft = false;
             }
             GetComponent<Rigidbody2D>().AddForce(transform.right * movementSpeed);
+            //add very small rotation to building
+            buildings.transform.Rotate(0f, 0.015f, 0f, Space.Self);
 
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))//move left
@@ -54,6 +58,8 @@ public class player : MonoBehaviour
                 facingLeft = true;
             }
             GetComponent<Rigidbody2D>().AddForce(transform.right * movementSpeed * -1);
+            //add very small rotation to buildings
+            buildings.transform.Rotate(0f, -0.015f, 0f, Space.Self);
 
         }
         else
