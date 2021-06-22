@@ -8,15 +8,11 @@ public class player : MonoBehaviour
 
 
     public GameObject gameManager;
-    //public variables to control speed
-    public float movementSpeed;
     //is the player facing left
     bool facingLeft = false;
-    //set max speed
-    public float maxSpeed = 10;
-    //buildings
-    public GameObject buildings;
-
+    //buildings/path
+    public GameObject rotationObjects;
+    public float rotationSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +23,7 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //check speed
-        if (GetComponent<Rigidbody2D>().velocity.magnitude > maxSpeed)
-        {
-            GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity.normalized * maxSpeed;
-        }
+        
 
         //controls for movement 
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))//move right
@@ -43,9 +35,8 @@ public class player : MonoBehaviour
                 transform.localScale = theScale;
                 facingLeft = false;
             }
-            GetComponent<Rigidbody2D>().AddForce(transform.right * movementSpeed);
             //add very small rotation to building
-            buildings.transform.Rotate(0f, 0.015f, 0f, Space.Self);
+            rotationObjects.transform.Rotate(0f, rotationSpeed, 0f, Space.World);
 
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))//move left
@@ -57,9 +48,8 @@ public class player : MonoBehaviour
                 transform.localScale = theScale;
                 facingLeft = true;
             }
-            GetComponent<Rigidbody2D>().AddForce(transform.right * movementSpeed * -1);
-            //add very small rotation to buildings
-            buildings.transform.Rotate(0f, -0.015f, 0f, Space.Self);
+            //add very small rotation to buildings and path
+            rotationObjects.transform.Rotate(0f, -rotationSpeed, 0f, Space.World);
 
         }
         else
