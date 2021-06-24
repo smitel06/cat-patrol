@@ -13,10 +13,14 @@ public class player : MonoBehaviour
     //buildings/path
     public GameObject rotationObjects;
     public float rotationSpeed;
+    //animations
+    Animator m_Animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        // get animator attached to this object
+        m_Animator = gameObject.GetComponent<Animator>();
 
     }
 
@@ -38,6 +42,11 @@ public class player : MonoBehaviour
             //add very small rotation to building
             rotationObjects.transform.Rotate(0f, rotationSpeed, 0f, Space.World);
 
+            //animate walking animation trigger
+            m_Animator.SetTrigger("walk");
+            //turn off not walking
+            m_Animator.ResetTrigger("not_walking");
+
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))//move left
         {
@@ -51,34 +60,28 @@ public class player : MonoBehaviour
             //add very small rotation to buildings and path
             rotationObjects.transform.Rotate(0f, -rotationSpeed, 0f, Space.World);
 
+            //animate walking animation trigger
+            m_Animator.SetTrigger("walk");
+            //turn off not walking
+            m_Animator.ResetTrigger("not_walking");
+
         }
         else
         {
-            //stop character from moving around
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            //reset all animation triggers when not moving
+            m_Animator.ResetTrigger("walk");
+            //set idle animation
+            m_Animator.SetTrigger("not_walking");
+
+
         }
+
     }
 
 
     void Update()
     {
-        //click detection
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //get mouse position
-            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y); //convert vec3 to vec2
-
-            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-            if (hit.collider != null) //if ray hit do something
-            {
-                //check for cat
-                if(hit.collider.gameObject.tag == "clickable")
-                {
-                    //activate click message
-                    hit.collider.gameObject.SendMessage("clicked");
-                }
-            }
-        }
+        
     }
 }
 

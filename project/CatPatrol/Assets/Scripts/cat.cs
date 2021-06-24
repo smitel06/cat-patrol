@@ -41,4 +41,12 @@ public class cat : MonoBehaviour
         gameManager.SendMessage("AddToScore");
         
     }
+
+    private void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            clicked();
+        }
+    }
 }
