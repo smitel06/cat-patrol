@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotspot = Vector2.zero;
     //gameobjects
     public GameObject player;
     public GameObject mCam;
@@ -17,7 +20,10 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //set score
         score = 0;
+        //set cursor for mouse
+        Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
     }
 
     // Update is called once per frame
