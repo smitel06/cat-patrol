@@ -15,6 +15,7 @@ public class player : MonoBehaviour
     public float rotationSpeed;
     //animations
     Animator m_Animator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,7 @@ public class player : MonoBehaviour
         
 
         //controls for movement 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))//move right
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))//move right
         {
             if (facingLeft)//turns sprite to the right
             {

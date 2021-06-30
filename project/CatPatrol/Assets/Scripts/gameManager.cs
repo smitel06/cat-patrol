@@ -15,7 +15,9 @@ public class gameManager : MonoBehaviour
     public float vertAdjustment;
     //score stuff
     public Text scoreText;
-    int score;
+    public int score;
+    //journal
+    public GameObject journal;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +31,15 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.J))
+        {
+            if (journal.activeSelf == true)
+            {
+                journal.SetActive(false);
+            }
+            else
+                journal.SetActive(true);
+        }
         //this is to update player position for camera otherwise it would not move
         player.transform.position = player.transform.position;
         mCam.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + vertAdjustment, -10);
