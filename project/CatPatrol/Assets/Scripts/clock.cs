@@ -75,7 +75,7 @@ public class clock : MonoBehaviour
             minutes = "0" + minutesI.ToString();
         }
         //display clock
-        timeText.text = hours + ":" + minutes + "pm";
+        timeText.text = hours + ":" + minutes;
 
         //timer and tick down for clock
         if(gameTime < Time.time)

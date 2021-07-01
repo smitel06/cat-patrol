@@ -676,10 +676,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Book-Page Curl Pro\Examples\scripts\AddPagesDynamically.cs" />
+    <Compile Include="Assets\Book-Page Curl Pro\Examples\scripts\BotAnimationControl.cs" />
+    <Compile Include="Assets\Book-Page Curl Pro\Examples\scripts\FastForwardFlipper.cs" />
+    <Compile Include="Assets\Book-Page Curl Pro\Scripts\AutoFlip.cs" />
+    <Compile Include="Assets\Book-Page Curl Pro\Scripts\BookPro.cs" />
+    <Compile Include="Assets\Book-Page Curl Pro\Scripts\PageFlipper.cs" />
+    <Compile Include="Assets\Book-Page Curl Pro\Scripts\Tween.cs" />
     <Compile Include="Assets\Scripts\cat.cs" />
     <Compile Include="Assets\Scripts\clock.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
+    <Compile Include="Assets\Scripts\tally.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI\UI Font and Colours.txt" />
