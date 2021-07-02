@@ -71,6 +71,7 @@ namespace BookCurlPro
             if (Input.GetKeyDown(KeyCode.J))
             {
                 //flip book back to start
+                AutoStartFlip = true;
                 FlipLeftPage();
             }
 
