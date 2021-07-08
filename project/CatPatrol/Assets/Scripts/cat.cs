@@ -36,7 +36,7 @@ public class cat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeToWait = 5.0F;
+        timeToWait = 2.5F;
         // get animator attached to this object
         m_Animator = gameObject.GetComponent<Animator>();
         //set time to wait in between deciding between movement options
@@ -60,6 +60,7 @@ public class cat : MonoBehaviour
         {
             //turn off message
             catFound.enabled = false;
+            
         }
 
         if (Time.time > changeMovementTime)

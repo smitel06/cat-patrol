@@ -31,6 +31,7 @@ public class tutorial : MonoBehaviour
     {
         //starts the game
         Time.timeScale = 1;
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         Destroy(tutorialScreen);
     }
 

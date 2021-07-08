@@ -3,11 +3,15 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BookCurlPro.AutoFlip
     - BookCurlPro.BookPro
+    - addFollower
     - cat
     - clock
+    - follower
     - gameManager
     - player
     - tally
+    - tutorial
+    - watch
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
@@ -22,6 +26,8 @@ ScriptsOnlyBuild:
     - UnityEngine.Experimental.U2D.IK.LimbSolver2D
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -101,31 +107,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11838}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12020}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 13038}
+      Script: {instanceID: 12472}
     - Class: 114
-      Script: {instanceID: 13232}
+      Script: {instanceID: 12730}
     - Class: 114
-      Script: {instanceID: 13316}
+      Script: {instanceID: 13042}
     - Class: 114
-      Script: {instanceID: 13734}
+      Script: {instanceID: 13236}
     - Class: 114
-      Script: {instanceID: 13824}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 13966}
+      Script: {instanceID: 13426}
     - Class: 114
-      Script: {instanceID: 14380}
+      Script: {instanceID: 13722}
     - Class: 114
-      Script: {instanceID: 14402}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 14452}
+      Script: {instanceID: 13832}
     - Class: 114
-      Script: {instanceID: 14484}
+      Script: {instanceID: 13974}
     - Class: 114
-      Script: {instanceID: 14508}
+      Script: {instanceID: 14388}
+    - Class: 114
+      Script: {instanceID: 14410}
+    - Class: 114
+      Script: {instanceID: 14460}
+    - Class: 114
+      Script: {instanceID: 14492}
+    - Class: 114
+      Script: {instanceID: 14516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -349,6 +363,12 @@ ScriptsOnlyBuild:
     className: PixelPerfectCamera
   - hash:
       serializedVersion: 2
+      Hash: b2c0ef5658bc1aebde07c71a41bdde15
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: watch
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -419,6 +439,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 3809205d846a6b5c5a4a1e19c5fac8e5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: follower
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -547,6 +573,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 93d417f46a61f696b05841be6697a2d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: tutorial
+  - hash:
+      serializedVersion: 2
       Hash: 04ce5ba03a87a609c0116b06103c71f4
     assemblyName: Unity.2D.Animation.Samples.Runtime.dll
     namespaceName: Unity.U2D.Animation.Sample
@@ -581,6 +613,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: BookCurlPro.Examples
     className: FastForwardFlipper
+  - hash:
+      serializedVersion: 2
+      Hash: 6c14e5a2cdee9baabe01327027b88379
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: addFollower
   - hash:
       serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
@@ -764,4 +802,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/maIn.unity
-  playerPath: C:/Users/Eliah/Desktop/Repos/cat-patrol/project/CatPatrol/cat_build/CatPatrol.exe
+  playerPath: C:/Users/Eliah/Desktop/cat patrol test/CatPatrol.exe

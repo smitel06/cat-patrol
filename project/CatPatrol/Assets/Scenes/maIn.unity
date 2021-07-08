@@ -4610,6 +4610,7 @@ RectTransform:
   - {fileID: 835659304}
   - {fileID: 1797323820}
   - {fileID: 1626557827}
+  - {fileID: 2020889015}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10088,7 +10089,7 @@ MonoBehaviour:
   rotationParent: {fileID: 592261987}
   player: {fileID: 193685519}
   distance: 0
-  distanceTillChange: 3.05
+  distanceTillChange: 4.8
 --- !u!95 &790961196
 Animator:
   serializedVersion: 3
@@ -17323,7 +17324,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &1467840236
 GameObject:
@@ -19116,7 +19117,6 @@ RectTransform:
   m_Children:
   - {fileID: 58186443}
   - {fileID: 1532888128}
-  - {fileID: 2020889015}
   m_Father: {fileID: 393216695}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22789,8 +22789,8 @@ RectTransform:
   - {fileID: 2058901132}
   - {fileID: 765741566}
   - {fileID: 1719917345}
-  m_Father: {fileID: 1626557827}
-  m_RootOrder: 2
+  m_Father: {fileID: 393216695}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
