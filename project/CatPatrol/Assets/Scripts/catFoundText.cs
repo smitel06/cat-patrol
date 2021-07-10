@@ -33,11 +33,11 @@ public class catFoundText : MonoBehaviour
         }
     }
 
-    public void showText(string clickMessage)
+    public void ShowText(string clickMessage)
     {
         //set text to click message
-        catFound.text = clickMessage;
         catFound.enabled = true;
+        catFound.text = clickMessage;
         //set wait time 
         waitTime = Time.time + timeToWait;
     }
