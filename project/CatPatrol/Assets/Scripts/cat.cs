@@ -56,6 +56,7 @@ public class cat : MonoBehaviour
 
         if (canMove)
         {
+
             if (Time.time > changeMovementTime)
             {
                 changeMovement = true;
