@@ -7,11 +7,8 @@ public class cat : MonoBehaviour
 {
     public GameObject gameManager;
     public string clickMessage;
-    //text object
-    public Text catFound;
-    //waiting time
-    float timeToWait;
-    float waitTime;
+    
+    
     //movement
     public GameObject rotator; //used for pivot to move cat on path
     public float movementSpeed;
@@ -36,7 +33,7 @@ public class cat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeToWait = 2.5F;
+        
         // get animator attached to this object
         m_Animator = gameObject.GetComponent<Animator>();
         //set time to wait in between deciding between movement options
@@ -55,13 +52,7 @@ public class cat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //checks timer
-        if (Time.time > waitTime)
-        {
-            //turn off message
-            catFound.enabled = false;
-            
-        }
+        
 
         if (Time.time > changeMovementTime)
         {
@@ -139,12 +130,7 @@ public class cat : MonoBehaviour
 
     public void clicked()
     {
-        //set text to click message
-        catFound.text = clickMessage;
-        //show message for 5 seconds
-        catFound.enabled = true;
-        //set wait time 
-        waitTime = Time.time + timeToWait;
+        
         gameManager.SendMessage("AddToScore");
         
     }
