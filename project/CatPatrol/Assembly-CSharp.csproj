@@ -71,9 +71,11 @@
     <Compile Include="Assets\Book-Page Curl Pro\Scripts\BookPro.cs" />
     <Compile Include="Assets\Book-Page Curl Pro\Scripts\PageFlipper.cs" />
     <Compile Include="Assets\Book-Page Curl Pro\Scripts\Tween.cs" />
+    <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\addFollower.cs" />
     <Compile Include="Assets\Scripts\cat.cs" />
     <Compile Include="Assets\Scripts\catFoundText.cs" />
+    <Compile Include="Assets\Scripts\catParentObject.cs" />
     <Compile Include="Assets\Scripts\clock.cs" />
     <Compile Include="Assets\Scripts\follower.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />

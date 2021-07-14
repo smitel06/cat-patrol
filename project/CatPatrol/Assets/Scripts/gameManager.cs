@@ -18,6 +18,9 @@ public class gameManager : MonoBehaviour
     public int score;
     //journal
     public GameObject journal;
+    //pause menu
+    public GameObject pauseMenu;
+    public GameObject catParent;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +34,11 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false)
         {
-            Application.Quit();
+            //open pause menu
+            pauseMenu.SetActive(true);
+            catParent.SendMessage("Pause");
         }
 
 

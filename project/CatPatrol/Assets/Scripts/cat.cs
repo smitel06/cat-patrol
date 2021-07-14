@@ -30,6 +30,8 @@ public class cat : MonoBehaviour
     public Vector2 hotspot = Vector2.zero;
     //bool for movement
     public bool canMove;
+    //bool for pause stuff
+    bool allowedToMoveAgain;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +48,7 @@ public class cat : MonoBehaviour
         moveLeft = false;
         facingLeft = true;
         changeMovement = true;
-        
+        randomNum = 1;
         
     }
 
@@ -156,5 +158,21 @@ public class cat : MonoBehaviour
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
     }
 
+    public void Paused()
+    {
+        if (canMove == true)
+        {
+            allowedToMoveAgain = true;
+            canMove = false;
+        }
+    }
 
+    public void Unpaused()
+    {
+        if (allowedToMoveAgain)
+        {
+            canMove = true;
+            allowedToMoveAgain = false;
+        }
+    }
 }
