@@ -13,7 +13,8 @@ public class tutorial : MonoBehaviour
     public Vector2 hotspot = Vector2.zero;
     //tutorial go
     public GameObject tutorialScreen;
-    
+    //cat parent
+    public GameObject catParent;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,8 @@ public class tutorial : MonoBehaviour
 
     public void clicked()
     {
+        //allow cats to be clicked
+        catParent.SendMessage("Unpause");
         //starts the game
         Time.timeScale = 1;
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);

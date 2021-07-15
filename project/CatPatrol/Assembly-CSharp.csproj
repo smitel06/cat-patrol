@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\follower.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />
     <Compile Include="Assets\Scripts\player.cs" />
+    <Compile Include="Assets\Scripts\startMenu.cs" />
     <Compile Include="Assets\Scripts\tally.cs" />
     <Compile Include="Assets\Scripts\tutorial.cs" />
     <Compile Include="Assets\Scripts\watch.cs" />

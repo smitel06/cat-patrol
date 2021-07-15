@@ -32,6 +32,7 @@ public class cat : MonoBehaviour
     public bool canMove;
     //bool for pause stuff
     bool allowedToMoveAgain;
+    bool canClick;
 
     // Start is called before the first frame update
     void Start()
@@ -134,22 +135,27 @@ public class cat : MonoBehaviour
 
     public void clicked()
     {
-        
-        gameManager.SendMessage("AddToScore");
-        screenMessage.SendMessage("ShowText", clickMessage);
-        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+        if (canClick)
+        {
+            gameManager.SendMessage("AddToScore");
+            screenMessage.SendMessage("ShowText", clickMessage);
+            Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+            Destroy(gameObject);
+        }
 
-        Destroy(gameObject);
     }
 
     private void OnMouseOver()
     {
-        //set cursor for mouse
-        Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
-
-        if (Input.GetMouseButtonDown(0))
+        if (canClick)
         {
-            clicked();
+            //set cursor for mouse
+            Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                clicked();
+            }
         }
     }
 
@@ -175,4 +181,17 @@ public class cat : MonoBehaviour
             allowedToMoveAgain = false;
         }
     }
+
+    public void Unclickable()
+    {
+        canClick = false;
+        
+    }
+
+    public void Clickable()
+    {
+        canClick = true;
+    }
+
+
 }

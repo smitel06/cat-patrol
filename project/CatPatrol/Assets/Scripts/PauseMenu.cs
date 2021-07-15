@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    public GameObject areYouSure;
+    public GameObject areYouSureRestart;
+    public GameObject areYouSureQuit;
     public GameObject catPaused;
+    //cursor stuff
+    public Texture2D cursorTexture;
+    public Texture2D defaultTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotspot = Vector2.zero;
 
     private void OnEnable()
     {
@@ -28,6 +34,10 @@ public class PauseMenu : MonoBehaviour
         catPaused.SendMessage("Unpause");
     }
 
+    public void RestartButton()
+    {
+        areYouSureRestart.SetActive(true);
+    }
     public void Restart()
     {
         //restart session
@@ -38,7 +48,7 @@ public class PauseMenu : MonoBehaviour
     {
         //exit game
         //show are you sure 
-        areYouSure.SetActive(true);
+        areYouSureQuit.SetActive(true);
     }
 
     public void QuitGame()
@@ -55,6 +65,22 @@ public class PauseMenu : MonoBehaviour
 
     public void noQuit()
     {
-        areYouSure.SetActive(false);
+        areYouSureQuit.SetActive(false);
+    }
+
+    public void noRestart()
+    {
+        areYouSureRestart.SetActive(false);
+    }
+
+    public void mouseOver()
+    {
+        //set cursor for mouse
+        Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
+    }
+
+    public void mouseExit()
+    {
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
     }
 }

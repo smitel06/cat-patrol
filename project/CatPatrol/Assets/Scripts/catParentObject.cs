@@ -7,7 +7,7 @@ public class catParentObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Pause();
     }
 
     // Update is called once per frame
@@ -20,13 +20,14 @@ public class catParentObject : MonoBehaviour
     {
         //broadcast pause to cats
         gameObject.BroadcastMessage("Paused");
+        gameObject.BroadcastMessage("Unclickable");
     }
 
     public void Unpause()
     {
         //broadcast unpause to all cats
         gameObject.BroadcastMessage("Unpaused");
-
+        gameObject.BroadcastMessage("Clickable");
 
     }
 }
