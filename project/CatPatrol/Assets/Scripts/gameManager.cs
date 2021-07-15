@@ -21,20 +21,32 @@ public class gameManager : MonoBehaviour
     //pause menu
     public GameObject pauseMenu;
     public GameObject catParent;
+    //gamemode selector
+    //use an int
+    public int gameMode;
+    //tutorial
+    public GameObject tutorial;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameMode = PlayerPrefs.GetInt("mode");
         //set score
         score = 0;
         //set cursor for mouse
         Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
+        
+        if(gameMode == 1)
+        {
+            Debug.Log("working new mode selected");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false)
+        
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false && tutorial == null)
         {
             //open pause menu
             pauseMenu.SetActive(true);

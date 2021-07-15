@@ -18796,7 +18796,7 @@ Animator:
   m_GameObject: {fileID: 992983705}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9f69108ca6b6184dab1ecdcf7484e6b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -20506,6 +20506,8 @@ MonoBehaviour:
   journal: {fileID: 835659303}
   pauseMenu: {fileID: 429946773}
   catParent: {fileID: 1161112656}
+  gameMode: 0
+  tutorial: {fileID: 2020889014}
 --- !u!1 &1143447546
 GameObject:
   m_ObjectHideFlags: 0
@@ -21563,7 +21565,7 @@ Animator:
   m_GameObject: {fileID: 1220854968}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9f69108ca6b6184dab1ecdcf7484e6b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -25702,7 +25704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 35.52}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 499.1, y: 281.9}
+  m_AnchoredPosition: {x: 505, y: 282}
   m_SizeDelta: {x: 153.25537, y: 28.735382}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1465813312
@@ -25737,7 +25739,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 2
-  m_Text: 12:00
+  m_Text: 1:00
 --- !u!222 &1465813313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25758,6 +25760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8529490897a5f74495cf475dd7579f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1141930156}
 --- !u!223 &1465813315
 Canvas:
   m_ObjectHideFlags: 0
@@ -33908,7 +33911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2020889015
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class startMenu : MonoBehaviour
 {
@@ -58,5 +59,34 @@ public class startMenu : MonoBehaviour
     public void mouseExit()
     {
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+    }
+
+    public void highScores()
+    {
+        //show highscores to player
+
+    }
+
+    public void ReturnButton()
+    {
+        //return to main menu
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+        selectGameMode.SetActive(false);
+        startMenuPanel.SetActive(true);
+    }
+
+    public void normalSelect()
+    {
+        //selected normal game type with time constraints
+        PlayerPrefs.SetInt("mode", 0);
+        SceneManager.LoadScene("main");
+    }
+
+    public void freeplaySelect()
+    {
+        //no timer do as you like
+        PlayerPrefs.SetInt("mode", 1);
+        SceneManager.LoadScene("main");
+
     }
 }

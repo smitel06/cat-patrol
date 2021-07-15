@@ -20,13 +20,24 @@ public class clock : MonoBehaviour
     //clock ticking down
     float timeTickDown;
     float changeTime;
+    //gamemanager
+    public GameObject gameManager;
+    bool endGame;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (gameManager.GetComponent<gameManager>().gameMode == 1)
+        {
+            //set game mode
+            endGame = false;
+        }
+        else
+            endGame = true;
+
         timeText = GetComponent<Text>();
         //set starting clock
-        hoursI = 12;
+        hoursI = 1;
         minutesI = 0;
         //timer
         gameLength = 5f; //5 minutes change this for longer game
@@ -75,10 +86,20 @@ public class clock : MonoBehaviour
             minutes = "0" + minutesI.ToString();
         }
         //display clock
-        timeText.text = hours + ":" + minutes;
+        if (hoursI == 12)
+        {
+            timeText.text = hours + ":" + minutes;
+        }
+        else
+        {
+            
+            timeText.text = hours + ":" + minutes;
+        }
+
+        
 
         //timer and tick down for clock
-        if(gameTime < Time.time)
+        if(gameTime < Time.time && endGame)
         {
             Debug.Log("end game");
         }
