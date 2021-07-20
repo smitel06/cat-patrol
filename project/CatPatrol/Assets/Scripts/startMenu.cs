@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class startMenu : MonoBehaviour
 {
-
+    public GameObject leaderboardPanel;
     public GameObject startMenuPanel;
     public GameObject areYouSureQuit;
     public GameObject selectGameMode;
@@ -64,11 +64,13 @@ public class startMenu : MonoBehaviour
     public void highScores()
     {
         //show highscores to player
-
+        leaderboardPanel.SetActive(true);
+        startMenuPanel.SetActive(false);
     }
 
     public void ReturnButton()
     {
+        leaderboardPanel.SetActive(false);
         //return to main menu
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         selectGameMode.SetActive(false);
