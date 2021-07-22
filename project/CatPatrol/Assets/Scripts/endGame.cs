@@ -115,7 +115,7 @@ public class endGame : MonoBehaviour
         {
             int temp;
             temp = PlayerPrefs.GetInt("highscore" + i);
-            if (score > temp)
+            if (score >= temp)
             {
 
                 //get name and show input field
@@ -142,7 +142,7 @@ public class endGame : MonoBehaviour
         playerName =  playerEntryName.text;
         beatenHighscore.SetActive(false);
         updateScores = true;
-        leaderboard.SetActive(true);
+        
 
     }
 
@@ -153,14 +153,17 @@ public class endGame : MonoBehaviour
 
             int previous = scoreBeaten;
             //if score is larger move all other scores down
-            for (int h = scoreBeaten; h < 10; h++)
+            for (int h = scoreBeaten - 1; h < 10; h++)
             {
-                
                 PlayerPrefs.SetInt("highscore" + h, PlayerPrefs.GetInt("highscore" + previous));
                 PlayerPrefs.SetString("scoreName" + h, PlayerPrefs.GetString("scoreName" + previous));
+                previous++;
+                
             }
             PlayerPrefs.SetInt("highscore" + scoreBeaten, score);
             PlayerPrefs.SetString("scoreName" + scoreBeaten, playerName);
+            updateScores = false;
+            leaderboard.SetActive(true);
         }
     }
 }
