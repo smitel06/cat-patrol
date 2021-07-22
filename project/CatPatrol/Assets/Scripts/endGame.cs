@@ -21,9 +21,13 @@ public class endGame : MonoBehaviour
     //namey things
     public Text playerEntryName;
     string playerName;
-    public Button enterName;
+    public GameObject confirmName;
+    public GameObject beatenHighscore;
+    bool updateScores;
+    int scoreBeaten;
 
-    private void OnEnable()
+
+    public void OnEnable()
     {
         score = gameManagerObject.GetComponent<gameManager>().score;
         //when turned on do these things
@@ -90,6 +94,7 @@ public class endGame : MonoBehaviour
 
     public void leaderboardClick()
     {
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         //show leaderboard
         leaderboard.SetActive(true);
         endGamePanel.SetActive(false);
@@ -97,6 +102,8 @@ public class endGame : MonoBehaviour
 
     public void returnButton()
     {
+
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         leaderboard.SetActive(false);
         endGamePanel.SetActive(true);
     }
@@ -104,22 +111,21 @@ public class endGame : MonoBehaviour
     public void checkScore(int score)
     {
         //compare scores
-        for (int i = 0; i < 10; i--)
+        for (int i = 0; i < 10; i++)
         {
             int temp;
             temp = PlayerPrefs.GetInt("highscore" + i);
-            if(score > temp)
+            if (score > temp)
             {
-                //if score is larger move all other scores down
-                for(int h = i; h < 10; h++)
-                {
-                    PlayerPrefs.SetInt("highscore" + h, PlayerPrefs.GetInt("highscore" + (h - 1)));
-                    PlayerPrefs.SetString("scoreName" + h, PlayerPrefs.GetString("scoreName" + (h - 1)));
-                }
-                PlayerPrefs.SetInt("highscore" + i, score);
 
-                PlayerPrefs.SetString("scoreName" + i, "unknown");
+                //get name and show input field
+                endGamePanel.SetActive(false);
+                beatenHighscore.SetActive(true);
+                scoreBeaten = i;
+
+                return;
             }
+            
         }
 
         
@@ -127,11 +133,34 @@ public class endGame : MonoBehaviour
 
     public void onInput()
     {
-        enterName.enabled = true;
+        Debug.Log("input string!");
+        confirmName.SetActive(true);
     }
 
     public void enteredName()
     {
         playerName =  playerEntryName.text;
+        beatenHighscore.SetActive(false);
+        updateScores = true;
+        leaderboard.SetActive(true);
+
+    }
+
+    private void Update()
+    {
+        if(updateScores)
+        {
+
+            int previous = scoreBeaten;
+            //if score is larger move all other scores down
+            for (int h = scoreBeaten; h < 10; h++)
+            {
+                
+                PlayerPrefs.SetInt("highscore" + h, PlayerPrefs.GetInt("highscore" + previous));
+                PlayerPrefs.SetString("scoreName" + h, PlayerPrefs.GetString("scoreName" + previous));
+            }
+            PlayerPrefs.SetInt("highscore" + scoreBeaten, score);
+            PlayerPrefs.SetString("scoreName" + scoreBeaten, playerName);
+        }
     }
 }
