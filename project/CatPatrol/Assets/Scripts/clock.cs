@@ -23,6 +23,8 @@ public class clock : MonoBehaviour
     //gamemanager
     public GameObject gameManager;
     bool endGame;
+    //end game
+    public GameObject endGameObject;
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +103,7 @@ public class clock : MonoBehaviour
         //timer and tick down for clock
         if(gameTime < Time.time && endGame)
         {
+            endGameObject.SetActive(true);
             Debug.Log("end game");
         }
 
