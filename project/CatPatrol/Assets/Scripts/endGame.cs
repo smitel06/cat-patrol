@@ -35,10 +35,7 @@ public class endGame : MonoBehaviour
         checkScore(score);
     }
 
-    private void OnDisable()
-    {
-        Time.timeScale = 1;
-    }
+    
 
     
 
@@ -151,19 +148,30 @@ public class endGame : MonoBehaviour
         if(updateScores)
         {
 
-            int previous = scoreBeaten;
+            int previousScore = PlayerPrefs.GetInt("highscore" + scoreBeaten);
+            string previousName = PlayerPrefs.GetString("scoreName" + scoreBeaten);
+
+            //swap previous with a holder then set previous then set prefs\
+
             //if score is larger move all other scores down
-            for (int h = scoreBeaten - 1; h < 10; h++)
+            for (int h = scoreBeaten + 1; h < 10; h++)
             {
-                PlayerPrefs.SetInt("highscore" + h, PlayerPrefs.GetInt("highscore" + previous));
-                PlayerPrefs.SetString("scoreName" + h, PlayerPrefs.GetString("scoreName" + previous));
-                previous++;
+                int holder = previousScore;
+                string holderName = previousName;
+                previousScore = PlayerPrefs.GetInt("highscores" + h);
+                previousName = PlayerPrefs.GetString("scoreName" + h);
+                PlayerPrefs.SetInt("highscore" + h, holder);
+                PlayerPrefs.SetString("scoreName" + h, holderName);
+                
                 
             }
             PlayerPrefs.SetInt("highscore" + scoreBeaten, score);
             PlayerPrefs.SetString("scoreName" + scoreBeaten, playerName);
             updateScores = false;
             leaderboard.SetActive(true);
+            leaderboard.SendMessage("updateLeaderboard");
+
+            updateScores = false;
         }
     }
 }

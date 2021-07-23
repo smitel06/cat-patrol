@@ -52,6 +52,25 @@ public class highscores : MonoBehaviour
 
     }
 
+    public void updateLeaderboard()
+    {
+        leaderboard.Clear();
+        scoreNames.Clear();
+        for (int i = 0; i < 10; i++)
+        {
+            int temp;
+            temp = PlayerPrefs.GetInt("highscore" + i);
+            leaderboard.Add(temp);
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            string temp;
+            temp = PlayerPrefs.GetString("scoreName" + i);
+            scoreNames.Add(temp);
+        }
+    }
+
 
 
 
