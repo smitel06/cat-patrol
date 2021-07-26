@@ -26,6 +26,8 @@ public class gameManager : MonoBehaviour
     public int gameMode;
     //tutorial
     public GameObject tutorial;
+    //camera shake
+    public bool cameraShake;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +67,10 @@ public class gameManager : MonoBehaviour
         }
         //this is to update player position for camera otherwise it would not move
         player.transform.position = player.transform.position;
-        mCam.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + vertAdjustment, -10);
+        if (!cameraShake)
+        {
+            mCam.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + vertAdjustment, -10);
+        }
 
         //score manager
         scoreText.text = score.ToString();

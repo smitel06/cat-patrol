@@ -8,6 +8,8 @@ public class cat : MonoBehaviour
     public GameObject gameManager;
     public string clickMessage;
     public GameObject screenMessage;
+    //buff
+    public GameObject catFrenzy;
     
     //movement
     public GameObject rotator; //used for pivot to move cat on path
@@ -137,6 +139,7 @@ public class cat : MonoBehaviour
     {
         if (canClick)
         {
+            catFrenzy.SendMessage("addValue");
             gameManager.SendMessage("AddToScore");
             screenMessage.SendMessage("ShowText", clickMessage);
             Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
