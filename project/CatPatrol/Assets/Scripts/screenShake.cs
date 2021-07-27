@@ -7,7 +7,7 @@ public class screenShake : MonoBehaviour
     //a behaviour for shaking the screen
     Transform camTransform;
     public float shakeDuration = 0f;
-    float shakeMagnitude = 0.7f;
+    public float shakeMagnitude = 0.04f;
     float dampingSpeed = 1.0f;
     Vector3 initialPosition;
     //gamemanager so we can call the script

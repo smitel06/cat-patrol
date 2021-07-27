@@ -29,13 +29,14 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         //resume game
-        
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         gameObject.SetActive(false);
         catPaused.SendMessage("Unpause");
     }
 
     public void RestartButton()
     {
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         areYouSureRestart.SetActive(true);
     }
     public void Restart()
@@ -46,6 +47,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitButton()
     {
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         //exit game
         //show are you sure 
         areYouSureQuit.SetActive(true);
@@ -65,11 +67,13 @@ public class PauseMenu : MonoBehaviour
 
     public void noQuit()
     {
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         areYouSureQuit.SetActive(false);
     }
 
     public void noRestart()
     {
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         areYouSureRestart.SetActive(false);
     }
 

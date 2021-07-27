@@ -16,8 +16,7 @@ public class gameManager : MonoBehaviour
     //score stuff
     public Text scoreText;
     public int score;
-    //journal
-    public GameObject journal;
+    
     //pause menu
     public GameObject pauseMenu;
     public GameObject catParent;
@@ -56,15 +55,7 @@ public class gameManager : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            if (journal.activeSelf == true)
-            {
-                journal.SetActive(false);
-            }
-            else
-                journal.SetActive(true);
-        }
+        
         //this is to update player position for camera otherwise it would not move
         player.transform.position = player.transform.position;
         if (!cameraShake)

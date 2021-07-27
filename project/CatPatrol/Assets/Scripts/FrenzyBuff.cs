@@ -12,6 +12,8 @@ public class FrenzyBuff : MonoBehaviour
     bool buffOn;
     //other ui stuff
     public Text frenzyText;
+    public GameObject gameManager;
+    public GameObject cam;
 
     // Start is called before the first frame update
     void Start()
@@ -82,12 +84,15 @@ public class FrenzyBuff : MonoBehaviour
 
     public void buffed()
     {
+        gameManager.GetComponent<gameManager>().cameraShake = true;
+        cam.GetComponent<screenShake>().shakeDuration = 20f;
+
         currentValue -= 1.0f;
         Debug.Log("buffed!");
         
         //character is in a cat frenzy
-        InvokeRepeating("TickDown", 2.0f, 0.25f);
-        InvokeRepeating("buffFeedback", 2.0f, 0.25f);
+        InvokeRepeating("TickDown", 0f, 0.25f);
+        InvokeRepeating("buffFeedback", 0f, 0.25f);
     }
 
     public void buffFeedback()
