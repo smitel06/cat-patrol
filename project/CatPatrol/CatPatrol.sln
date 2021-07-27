@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.TestRunner", "UnityEngine.TestRunner.csproj", "{F6D8819B-B35F-5EBC-098F-A9E35CB96419}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Postprocessing.Runtime", "Unity.Postprocessing.Runtime.csproj", "{169A8944-79AF-C8BB-28BD-79F00F421233}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Animation.Triangle.Runtime", "Unity.2D.Animation.Triangle.Runtime.csproj", "{1AF2DC78-435B-DD50-B1F8-674DA0E20B4B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro", "Unity.TextMeshPro.csproj", "{A96C7139-CE5A-944F-A20A-3940D0FDED06}"
 EndProject
@@ -89,6 +89,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F6D8819B-B35F-5EBC-098F-A9E35CB96419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F6D8819B-B35F-5EBC-098F-A9E35CB96419}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D8819B-B35F-5EBC-098F-A9E35CB96419}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -101,10 +105,6 @@ Global
 		{1AF2DC78-435B-DD50-B1F8-674DA0E20B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AF2DC78-435B-DD50-B1F8-674DA0E20B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AF2DC78-435B-DD50-B1F8-674DA0E20B4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E27A269-12EC-592E-BE4F-80FF87E3F7AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A96C7139-CE5A-944F-A20A-3940D0FDED06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A96C7139-CE5A-944F-A20A-3940D0FDED06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A96C7139-CE5A-944F-A20A-3940D0FDED06}.Release|Any CPU.ActiveCfg = Release|Any CPU
