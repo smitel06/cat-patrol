@@ -28,6 +28,12 @@ public class follower : MonoBehaviour
         //set distance to wait to for changing attachment
     }
 
+    public void OnEnable()
+    {
+        m_Animator = gameObject.GetComponent<Animator>();
+        m_Animator.speed = 1.5f;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
