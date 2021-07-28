@@ -35,6 +35,8 @@ public class cat : MonoBehaviour
     //bool for pause stuff
     bool allowedToMoveAgain;
     bool canClick;
+    //follower stuff
+    public GameObject catFollower; //assign corresponding follower 
 
     // Start is called before the first frame update
     void Start()
@@ -139,6 +141,9 @@ public class cat : MonoBehaviour
     {
         if (canClick)
         {
+            //add cat follower to active
+            catFollower.SetActive(true);
+
             catFrenzy.SendMessage("addValue");
             gameManager.SendMessage("AddToScore");
             screenMessage.SendMessage("ShowText", clickMessage);

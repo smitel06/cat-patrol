@@ -17,7 +17,7 @@ TagManager:
   - 
   - PlayerIgnore
   - Player
-  - 
+  - followers
   - 
   - 
   - 
@@ -42,4 +42,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: followers
+    uniqueID: 1064117887
     locked: 0
