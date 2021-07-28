@@ -27,6 +27,12 @@ public class gameManager : MonoBehaviour
     public GameObject tutorial;
     //camera shake
     public bool cameraShake;
+    //multiplier
+    int multiplier;
+    public bool frenzyBuff;
+    public Text multiplierText;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -41,11 +47,26 @@ public class gameManager : MonoBehaviour
         {
             Debug.Log("working new mode selected");
         }
+
+        multiplier = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!frenzyBuff)
+        {
+            multiplierText.enabled = false;
+            multiplier = 1;
+        }
+        else if (frenzyBuff && multiplier == 1)
+            multiplier = 2;
+        
+        if(frenzyBuff)
+        {
+            multiplierText.enabled = true;
+            multiplierText.text = "Multiplier x" + multiplier;
+        }
         
         if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false && tutorial == null)
         {
@@ -69,6 +90,12 @@ public class gameManager : MonoBehaviour
 
     public void AddToScore()
     {
-        score++;
+        score += (1 * multiplier);
+
+        if(frenzyBuff)
+        {
+            
+            multiplier++;
+        }
     }
 }

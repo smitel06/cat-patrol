@@ -14,6 +14,8 @@ public class FrenzyBuff : MonoBehaviour
     public Text frenzyText;
     public GameObject gameManager;
     public GameObject cam;
+    //multi stuff
+    public Text multiplierText;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,8 @@ public class FrenzyBuff : MonoBehaviour
         }
         else if (currentValue <= 0)
         {
+            gameManager.GetComponent<gameManager>().frenzyBuff = false;
+
             CancelInvoke();
             currentValue = 0;
         }
@@ -84,8 +88,9 @@ public class FrenzyBuff : MonoBehaviour
 
     public void buffed()
     {
+        gameManager.GetComponent<gameManager>().frenzyBuff = true;
         gameManager.GetComponent<gameManager>().cameraShake = true;
-        cam.GetComponent<screenShake>().shakeDuration = 20f;
+        cam.GetComponent<screenShake>().shakeDuration = 30f;
 
         currentValue -= 1.0f;
         Debug.Log("buffed!");
@@ -100,14 +105,18 @@ public class FrenzyBuff : MonoBehaviour
         //pulsating text
         if (frenzyText.fontSize == 35)
         {
-            for(int i = 0; i < 7; i++)
+            for (int i = 0; i < 7; i++)
             {
                 frenzyText.fontSize++;
+                multiplierText.fontSize++;
             }
         }
         else
+        {
             frenzyText.fontSize = 35;
-
+            multiplierText.fontSize = 35;
+        }
+        
 
     }
     

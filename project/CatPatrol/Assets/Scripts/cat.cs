@@ -37,15 +37,26 @@ public class cat : MonoBehaviour
     bool canClick;
     //follower stuff
     public GameObject catFollower; //assign corresponding follower 
+    //random start stuff
+    public float randomRot;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
         // get animator attached to this object
         m_Animator = gameObject.GetComponent<Animator>();
         //set time to wait in between deciding between movement options
         
+
+        //starting spot
+        randomRot = Random.Range(1, 361);
+        rotator.transform.Rotate(0f, randomRot, 0f, Space.World);
+
+
+
 
         //saet movement bools
         idle = true;
