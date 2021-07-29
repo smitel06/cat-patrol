@@ -16,10 +16,13 @@ public class FrenzyBuff : MonoBehaviour
     public GameObject cam;
     //multi stuff
     public Text multiplierText;
+    //random
+    public GameObject randomCat;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         tickDown = true;
         maxValue = 100;
         minValue = 0;
@@ -75,6 +78,7 @@ public class FrenzyBuff : MonoBehaviour
             gameManager.GetComponent<gameManager>().frenzyBuff = true;
             gameManager.GetComponent<gameManager>().cameraShake = true;
             cam.GetComponent<screenShake>().shakeDuration = 1f;
+            rainingCats();
         }
         else
         {
@@ -136,5 +140,17 @@ public class FrenzyBuff : MonoBehaviour
     public void rainingCats()
     {
         //make it rain cats on wanda until frenzy ends
+        for (int i = 0; i < 4; i++)
+        {
+            float spawnY = Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y;
+        
+            float spawnX = Random.Range
+                (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+
+            Vector2 spawnPosition = new Vector2(spawnX, spawnY);
+            Instantiate(randomCat, spawnPosition, Quaternion.identity);
+        }
+
+
     }
 }

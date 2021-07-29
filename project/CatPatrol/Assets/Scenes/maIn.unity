@@ -22152,6 +22152,8 @@ MonoBehaviour:
   gameManager: {fileID: 1141930156}
   cam: {fileID: 519420028}
   multiplierText: {fileID: 1342584566}
+  randomCat: {fileID: 7825221377856212126, guid: 91bb13b327fd2e647bcb0edf2bf86be4,
+    type: 3}
 --- !u!1 &671600919
 GameObject:
   m_ObjectHideFlags: 0
