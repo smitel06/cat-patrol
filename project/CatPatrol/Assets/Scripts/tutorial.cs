@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class tutorial : MonoBehaviour
 {
-
+    public GameObject watch;
     //cursor stuff
     public Texture2D cursorTexture;
     public Texture2D defaultTexture;
@@ -30,6 +30,8 @@ public class tutorial : MonoBehaviour
 
     public void clicked()
     {
+        //start timer
+        watch.SendMessage("setTimer");
         //allow cats to be clicked
         catParent.SendMessage("Unpause");
         //starts the game

@@ -24840,6 +24840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f3996a987284b4584a7f05f44cb9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  watch: {fileID: 1465813310}
   cursorTexture: {fileID: 2800000, guid: 73c2f51eb6312fe489ba879152a44dfb, type: 3}
   defaultTexture: {fileID: 2800000, guid: 1fd31d47fa33afe4a836877f7b88e01a, type: 3}
   cursorMode: 0
@@ -47826,6 +47827,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8529490897a5f74495cf475dd7579f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameLength: 0
+  gameTime: 0
   gameManager: {fileID: 1141930156}
   endGameObject: {fileID: 335160666}
 --- !u!223 &1465813315

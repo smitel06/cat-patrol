@@ -15,8 +15,8 @@ public class clock : MonoBehaviour
     string hours;
     string minutes;
     //timer
-    float gameLength;
-    float gameTime;
+    public float gameLength;
+    public float gameTime;
     //clock ticking down
     float timeTickDown;
     float changeTime;
@@ -43,10 +43,9 @@ public class clock : MonoBehaviour
         minutesI = 0;
         //timer
         gameLength = 5f; //5 minutes change this for longer game
-        gameTime = Time.time + (gameLength * 60);
+        
         //tick for clock
         timeTickDown = 1;
-        changeTime = Time.time + timeTickDown;
     }
 
     // Update is called once per frame
@@ -100,9 +99,10 @@ public class clock : MonoBehaviour
 
         
 
-        //timer and tick down for clock
-        if(gameTime < Time.time && endGame)
+        //if clock reaches six end game
+        if(hoursI == 6 && endGame)
         {
+            timeText.text = "6:00";
             endGameObject.SetActive(true);
             Debug.Log("end game");
         }
@@ -110,4 +110,12 @@ public class clock : MonoBehaviour
 
 
     }
+
+    public void setTimer()
+    {
+        changeTime = Time.time + timeTickDown;
+        gameTime = Time.time + (gameLength * 60);
+    }
+
+
 }
