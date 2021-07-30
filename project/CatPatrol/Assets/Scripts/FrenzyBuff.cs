@@ -18,6 +18,9 @@ public class FrenzyBuff : MonoBehaviour
     public Text multiplierText;
     //random
     public GameObject randomCat;
+    //timer for raining cats
+    public float rainingCatTimer;
+    float timeToWait;
 
     // Start is called before the first frame update
     void Start()
@@ -78,7 +81,12 @@ public class FrenzyBuff : MonoBehaviour
             gameManager.GetComponent<gameManager>().frenzyBuff = true;
             gameManager.GetComponent<gameManager>().cameraShake = true;
             cam.GetComponent<screenShake>().shakeDuration = 1f;
-            rainingCats();
+
+            if (timeToWait < Time.time)
+            {
+                rainingCats();
+                timeToWait = rainingCatTimer + Time.time;
+            }
         }
         else
         {
@@ -140,8 +148,7 @@ public class FrenzyBuff : MonoBehaviour
     public void rainingCats()
     {
         //make it rain cats on wanda until frenzy ends
-        for (int i = 0; i < 4; i++)
-        {
+        
             float spawnY = Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y;
         
             float spawnX = Random.Range
@@ -149,7 +156,7 @@ public class FrenzyBuff : MonoBehaviour
 
             Vector2 spawnPosition = new Vector2(spawnX, spawnY);
             Instantiate(randomCat, spawnPosition, Quaternion.identity);
-        }
+        
 
 
     }

@@ -99,7 +99,12 @@ public class RandomCat : MonoBehaviour
         
         m_renderer.sprite = sprites[randomNum];
         //random gravity scale
-        m_body.gravityScale = Random.Range(2, 6);
+        m_body.gravityScale = Random.Range(0.2f, 1.5f);
 
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 }
