@@ -691,6 +691,7 @@
     <Compile Include="Assets\Book-Page Curl Pro\Scripts\Tween.cs" />
     <Compile Include="Assets\Scripts\FrenzyBuff.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\RandomCat.cs" />
     <Compile Include="Assets\Scripts\addFollower.cs" />
     <Compile Include="Assets\Scripts\cat.cs" />
     <Compile Include="Assets\Scripts\catFoundText.cs" />
