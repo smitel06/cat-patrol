@@ -9,7 +9,7 @@ public class FrenzyBuff : MonoBehaviour
     float minValue;
     public float currentValue;
     bool tickDown;
-    bool buffOn;
+    public bool buffOn;
     //other ui stuff
     public Text frenzyText;
     public GameObject gameManager;
@@ -99,11 +99,11 @@ public class FrenzyBuff : MonoBehaviour
     }
 
     //add 10 to buff when cat is found
-    public void addValue()
+    public void addValue(int value)
     {
-        CancelInvoke();
+        
         tickDown = true;
-        currentValue += 30;
+        currentValue += value;
     }
 
     public void TickDown()
@@ -160,4 +160,6 @@ public class FrenzyBuff : MonoBehaviour
 
 
     }
+
+    
 }

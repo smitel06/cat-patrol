@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class RandomCat : MonoBehaviour
 {
+    //cursor stuff
+    public Texture2D cursorTexture;
+    public Texture2D defaultTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotspot = Vector2.zero;
+    //other objects
+    public GameObject gameManager;
+    public GameObject catFrenzy;
+    public GameObject screenMessage;
+
     public Sprite sprite1;
     public Sprite sprite2;
     public Sprite sprite3;
@@ -43,6 +53,11 @@ public class RandomCat : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
+        //find gameObjects
+        gameManager = GameObject.Find("GameManager");
+        catFrenzy = GameObject.Find("cat frenzy");
+        screenMessage = GameObject.Find("catMessage");
+
         m_renderer = gameObject.GetComponent<SpriteRenderer>();
         m_body = gameObject.GetComponent<Rigidbody2D>();
 
@@ -81,14 +96,17 @@ public class RandomCat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(transform.position.y == -1)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void spawnRandom()
     {
         //set random sprite
         randomNum = Random.Range(0, 26);
-        randomFloat = Random.Range(0.25f, 0.51f);
+        randomFloat = Random.Range(0.25f, 0.55f);
         //if certain cats do not change the scale
         if(randomNum == 11 || randomNum == 12 || randomNum == 13 || randomNum == 14 || randomNum == 15 || randomNum == 16 || randomNum == 17 || randomNum == 18 || randomNum == 19 || randomNum == 20)
         {
@@ -98,13 +116,60 @@ public class RandomCat : MonoBehaviour
             transform.localScale = new Vector3(randomFloat, randomFloat, 1);
         
         m_renderer.sprite = sprites[randomNum];
+        m_renderer.sortingOrder = 100;
         //random gravity scale
-        m_body.gravityScale = Random.Range(0.2f, 1.5f);
+        m_body.gravityScale = Random.Range(0.2f, 2f);
+
+        if (m_renderer.sprite == sprite6)
+        {
+            //pug always same scale
+            transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            m_body.gravityScale = 0.5f;
+        }
 
     }
 
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    private void OnMouseOver()
+    {
+        //set cursor for mouse
+        Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            clicked();
+        }
+
+    }
+
+    public void clicked()
+    {
+        if (m_renderer.sprite == sprite6)
+        {
+            Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+            //you hit the pug gameover
+            catFrenzy.GetComponent<FrenzyBuff>().buffOn = false;
+            catFrenzy.GetComponent<FrenzyBuff>().currentValue = 0;
+            screenMessage.SendMessage("ShowText", "Detective Frank Stopped The Party!");
+            catFrenzy.SendMessage("DestroyRandoms");
+
+        }
+        else
+        {
+            catFrenzy.SendMessage("addValue", 5);
+            gameManager.SendMessage("AddToScore");
+        }
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+        Destroy(gameObject);
+
+    }
+
+    void OnMouseExit()
+    {
+        Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
     }
 }

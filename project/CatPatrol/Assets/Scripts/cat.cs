@@ -155,7 +155,7 @@ public class cat : MonoBehaviour
             //add cat follower to active
             catFollower.SetActive(true);
 
-            catFrenzy.SendMessage("addValue");
+            catFrenzy.SendMessage("addValue", 30);
             gameManager.SendMessage("AddToScore");
             screenMessage.SendMessage("ShowText", clickMessage);
             Cursor.SetCursor(defaultTexture, hotspot, cursorMode);

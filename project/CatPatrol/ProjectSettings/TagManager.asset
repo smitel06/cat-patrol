@@ -6,6 +6,7 @@ TagManager:
   tags:
   - clickable
   - tallyCount
+  - spawns
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - PlayerIgnore
   - Player
   - followers
-  - 
+  - randomCat
   - 
   - 
   - 
