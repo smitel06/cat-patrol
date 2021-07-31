@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\catFoundText.cs" />
     <Compile Include="Assets\Scripts\catParentObject.cs" />
     <Compile Include="Assets\Scripts\clock.cs" />
+    <Compile Include="Assets\Scripts\eagle.cs" />
     <Compile Include="Assets\Scripts\endGame.cs" />
     <Compile Include="Assets\Scripts\follower.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\tutorial.cs" />
     <Compile Include="Assets\Scripts\watch.cs" />
     <None Include="Assets\UI\UI Font and Colours.txt" />
+    <None Include="Assets\2DBirds_Eagle\Documentation\Documentation.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/programs/Unity/2019.4.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
