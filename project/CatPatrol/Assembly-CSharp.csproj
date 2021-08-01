@@ -64,13 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Book-Page Curl Pro\Examples\scripts\AddPagesDynamically.cs" />
-    <Compile Include="Assets\Book-Page Curl Pro\Examples\scripts\BotAnimationControl.cs" />
-    <Compile Include="Assets\Book-Page Curl Pro\Examples\scripts\FastForwardFlipper.cs" />
-    <Compile Include="Assets\Book-Page Curl Pro\Scripts\AutoFlip.cs" />
-    <Compile Include="Assets\Book-Page Curl Pro\Scripts\BookPro.cs" />
-    <Compile Include="Assets\Book-Page Curl Pro\Scripts\PageFlipper.cs" />
-    <Compile Include="Assets\Book-Page Curl Pro\Scripts\Tween.cs" />
     <Compile Include="Assets\Scripts\FrenzyBuff.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\RandomCat.cs" />
@@ -91,7 +84,6 @@
     <Compile Include="Assets\Scripts\tutorial.cs" />
     <Compile Include="Assets\Scripts\watch.cs" />
     <None Include="Assets\UI\UI Font and Colours.txt" />
-    <None Include="Assets\2DBirds_Eagle\Documentation\Documentation.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/programs/Unity/2019.4.24f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
