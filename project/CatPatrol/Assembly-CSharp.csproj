@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\clock.cs" />
     <Compile Include="Assets\Scripts\eagle.cs" />
     <Compile Include="Assets\Scripts\endGame.cs" />
+    <Compile Include="Assets\Scripts\environmentals.cs" />
     <Compile Include="Assets\Scripts\follower.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />
     <Compile Include="Assets\Scripts\highscores.cs" />
