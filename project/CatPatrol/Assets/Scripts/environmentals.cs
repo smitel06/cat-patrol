@@ -77,17 +77,14 @@ public class environmentals : MonoBehaviour
 
     public void clicked()
     {
-
         shakeDuration = 0.5f;
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
-
         //if there is a cat enable him and do behaviour else send message
         if(isCat)
         {
             cat.SetActive(true);
+            isCat = false;
         }
-        
-
     }
 
 }
