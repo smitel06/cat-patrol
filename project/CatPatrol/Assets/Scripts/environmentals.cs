@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class environmentals : MonoBehaviour
 {
+    //hidden cat stuff
+    public GameObject cat;
+    public bool isCat; //is there a cat hidden behind
+
+
     //a behaviour for shaking the object this is attached too
     Transform objectTransform;
     public float shakeDuration = 0f;
@@ -75,6 +80,12 @@ public class environmentals : MonoBehaviour
 
         shakeDuration = 0.5f;
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+
+        //if there is a cat enable him and do behaviour else send message
+        if(isCat)
+        {
+            cat.SetActive(true);
+        }
         
 
     }
