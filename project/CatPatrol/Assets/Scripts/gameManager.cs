@@ -20,6 +20,7 @@ public class gameManager : MonoBehaviour
     //pause menu
     public GameObject pauseMenu;
     public GameObject catParent;
+    public GameObject hiddenCatParent;
     //gamemode selector
     //use an int
     public int gameMode;
@@ -73,6 +74,7 @@ public class gameManager : MonoBehaviour
             //open pause menu
             pauseMenu.SetActive(true);
             catParent.SendMessage("Pause");
+            
         }
 
 

@@ -7,7 +7,7 @@ public class environmentals : MonoBehaviour
     //hidden cat stuff
     public GameObject cat;
     public bool isCat; //is there a cat hidden behind
-
+    public GameObject newParent;
 
     //a behaviour for shaking the object this is attached too
     Transform objectTransform;
@@ -83,6 +83,11 @@ public class environmentals : MonoBehaviour
         if(isCat)
         {
             cat.SetActive(true);
+            cat.SendMessage("Unpaused");
+            cat.SendMessage("Clickable");
+            //detach parent and attach to cats
+            cat.transform.parent = null;
+            cat.transform.parent = newParent.transform;
             isCat = false;
         }
     }

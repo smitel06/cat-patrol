@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class hiddenCat : MonoBehaviour
 {
+    
     SpriteRenderer spriteRen;
     Rigidbody2D rBody;
     public float force;
     public float timeToWait;
     public float waitTime;
+    
 
     private void OnEnable()
     {
@@ -21,13 +23,15 @@ public class hiddenCat : MonoBehaviour
         timeToWait = waitTime + Time.time;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(Time.time > timeToWait)
         {
             Destroy(rBody);
         }
     }
+
+
 
 
 }
