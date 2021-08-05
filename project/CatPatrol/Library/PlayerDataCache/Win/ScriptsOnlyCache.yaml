@@ -3,13 +3,16 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - FrenzyBuff
     - PauseMenu
+    - RandomCat
     - cat
     - catFoundText
     - catParentObject
     - clock
     - endGame
+    - environmentals
     - follower
     - gameManager
+    - hiddenCat
     - highscores
     - player
     - screenShake
@@ -37,14 +40,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -83,6 +78,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 60
       Script: {instanceID: 0}
     - Class: 74
@@ -102,63 +99,69 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11322}
-    - Class: 114
       Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11530}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11560}
     - Class: 114
-      Script: {instanceID: 12020}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12050}
     - Class: 114
-      Script: {instanceID: 12518}
+      Script: {instanceID: 12240}
     - Class: 114
-      Script: {instanceID: 12678}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12680}
+      Script: {instanceID: 12706}
     - Class: 114
-      Script: {instanceID: 12798}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 12820}
     - Class: 114
-      Script: {instanceID: 13144}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13294}
+      Script: {instanceID: 12990}
     - Class: 114
-      Script: {instanceID: 13412}
+      Script: {instanceID: 13172}
     - Class: 114
-      Script: {instanceID: 13588}
+      Script: {instanceID: 13322}
     - Class: 114
-      Script: {instanceID: 13608}
+      Script: {instanceID: 13440}
     - Class: 114
-      Script: {instanceID: 13696}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 13776}
+      Script: {instanceID: 13616}
     - Class: 114
-      Script: {instanceID: 14028}
+      Script: {instanceID: 13636}
     - Class: 114
-      Script: {instanceID: 14126}
+      Script: {instanceID: 13724}
     - Class: 114
-      Script: {instanceID: 14328}
+      Script: {instanceID: 13726}
     - Class: 114
-      Script: {instanceID: 14378}
+      Script: {instanceID: 13806}
     - Class: 114
-      Script: {instanceID: 14678}
+      Script: {instanceID: 14052}
     - Class: 114
-      Script: {instanceID: 14714}
+      Script: {instanceID: 14150}
+    - Class: 114
+      Script: {instanceID: 14350}
+    - Class: 114
+      Script: {instanceID: 14400}
+    - Class: 114
+      Script: {instanceID: 14700}
     - Class: 114
       Script: {instanceID: 14738}
     - Class: 114
-      Script: {instanceID: 14788}
+      Script: {instanceID: 14762}
     - Class: 114
-      Script: {instanceID: 14826}
-    - Class: 114
-      Script: {instanceID: 14838}
+      Script: {instanceID: 14812}
     - Class: 114
       Script: {instanceID: 14850}
+    - Class: 114
+      Script: {instanceID: 14862}
+    - Class: 114
+      Script: {instanceID: 14874}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,25 +200,25 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11322}
-    - Class: 114
       Script: {instanceID: 11432}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 12518}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 12680}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 13294}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 14112}
+      Script: {instanceID: 13322}
     - Class: 114
-      Script: {instanceID: 14126}
+      Script: {instanceID: 14136}
     - Class: 114
-      Script: {instanceID: 14714}
+      Script: {instanceID: 14150}
     - Class: 114
-      Script: {instanceID: 14788}
+      Script: {instanceID: 14738}
+    - Class: 114
+      Script: {instanceID: 14812}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -233,12 +236,6 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: aba7b2852ef61d175dd9602e7723d5e5
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Mask
   - hash:
       serializedVersion: 2
       Hash: aeb62f729c52c814dec86c47dcac1471
@@ -289,7 +286,7 @@ ScriptsOnlyBuild:
     className: TMP_Dropdown
   - hash:
       serializedVersion: 2
-      Hash: 63ab5345881d5343fa1600052b17418e
+      Hash: 6d06a794daab555da3c4655c0ce9b636
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: clock
@@ -499,16 +496,16 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: aba7b2852ef61d175dd9602e7723d5e5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
-  - hash:
-      serializedVersion: 2
-      Hash: 1f5592b059c71bb9c8a7d3628397a7de
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: BookCurlPro.Examples
-    className: AddPagesDynamically
   - hash:
       serializedVersion: 2
       Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
@@ -547,12 +544,6 @@ ScriptsOnlyBuild:
     className: SpriteShape
   - hash:
       serializedVersion: 2
-      Hash: 659d6ceab26f9e4237abaaf29249f293
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: BookCurlPro.Examples
-    className: BotAnimationControl
-  - hash:
-      serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -587,6 +578,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: ChromaticAberration
+  - hash:
+      serializedVersion: 2
+      Hash: e4c0e900760582655d89f2cdfa532d49
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: hiddenCat
   - hash:
       serializedVersion: 2
       Hash: c3142a2a9c4b65686db6e07e298b5c59
@@ -691,10 +688,10 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: f38be48982faae0ad41922699319f42a
+      Hash: 8875100dc7d826c9712b73a8a23a5892
     assemblyName: Assembly-CSharp.dll
-    namespaceName: BookCurlPro
-    className: AutoFlip
+    namespaceName: 
+    className: RandomCat
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -751,13 +748,19 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: bfd23a0f5f195a7eb344bacfb78d3087
+      Hash: c54c749f2c87cbeca3e3ad91b81204b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: tutorial
   - hash:
       serializedVersion: 2
-      Hash: e6f3a3ed0e15495d5af66b9a25f4e03a
+      Hash: 77914f91f32bd095eedf95d99fecaf23
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: environmentals
+  - hash:
+      serializedVersion: 2
+      Hash: 0cd21a22855ac164a191876a03134450
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FrenzyBuff
@@ -779,24 +782,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: c8b807bb70ac9f474615c8547223d68c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: BookCurlPro
-    className: PageFlipper
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: BookCurlPro
-    className: Tween
-  - hash:
-      serializedVersion: 2
-      Hash: dfefff07c8a0e31dfacb028b6be9981b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: BookCurlPro.Examples
-    className: FastForwardFlipper
   - hash:
       serializedVersion: 2
       Hash: 6c14e5a2cdee9baabe01327027b88379
@@ -839,12 +824,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
-  - hash:
-      serializedVersion: 2
-      Hash: 2d4ea75b32714cff284d4619185952cd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: BookCurlPro
-    className: BookPro
   - hash:
       serializedVersion: 2
       Hash: 241b2ef50aed9514128fb7c79016c7a0
@@ -931,6 +910,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 77a5e488eab97f6e8b8095cc7f1eb015
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: eagle
+  - hash:
+      serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -985,7 +970,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: b3a0dd513254011e52ea0927d7a7480d
+      Hash: 32619c939d881c23080d613abfa799f1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameManager
