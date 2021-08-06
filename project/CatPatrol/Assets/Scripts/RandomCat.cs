@@ -155,7 +155,7 @@ public class RandomCat : MonoBehaviour
             catFrenzy.GetComponent<FrenzyBuff>().buffOn = false;
             catFrenzy.GetComponent<FrenzyBuff>().currentValue = 0;
             screenMessage.SendMessage("ShowText", "Detective Frank Stopped The Party!");
-            catFrenzy.SendMessage("DestroyRandoms");
+
 
         }
         else
