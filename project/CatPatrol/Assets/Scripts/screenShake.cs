@@ -12,7 +12,10 @@ public class screenShake : MonoBehaviour
     Vector3 initialPosition;
     //gamemanager so we can call the script
     public GameObject gameManager;
-
+    //sound things 
+    public AudioClip background;
+    public AudioClip frenzy;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     private void Awake()
@@ -21,6 +24,9 @@ public class screenShake : MonoBehaviour
         {
             camTransform = gameObject.transform;
         }
+
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -35,11 +41,25 @@ public class screenShake : MonoBehaviour
         {
             gameManager.GetComponent<gameManager>().cameraShake = true;
             transform.localPosition = initialPosition + Random.insideUnitSphere * shakeMagnitude;
-
             shakeDuration -= Time.deltaTime * dampingSpeed;
+
+            if (audioSource.clip == background)
+            {
+                //change sound
+                audioSource.clip = frenzy;
+                audioSource.time = 5.0f;
+                audioSource.Play();
+                
+            }
         }
         else
         {
+            if (audioSource.clip == frenzy)
+            {
+                audioSource.clip = background;
+                audioSource.Play();
+            }
+
             gameManager.GetComponent<gameManager>().cameraShake = false;
             shakeDuration = 0f;
             transform.localPosition = initialPosition;

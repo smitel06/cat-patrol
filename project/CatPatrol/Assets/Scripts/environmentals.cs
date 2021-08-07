@@ -22,6 +22,11 @@ public class environmentals : MonoBehaviour
     public Texture2D defaultTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotspot = Vector2.zero;
+    //message stuff
+    public GameObject screenMessage;
+    //sound things
+    AudioSource audioPlayer;
+    public AudioClip soundEffect;
 
 
     // Start is called before the first frame update
@@ -31,6 +36,10 @@ public class environmentals : MonoBehaviour
         {
             objectTransform = gameObject.transform;
         }
+
+        screenMessage = GameObject.Find("catMessage");
+        audioPlayer = GetComponent<AudioSource>();
+        audioPlayer.clip = soundEffect;
     }
 
     // Update is called once per frame
@@ -77,11 +86,13 @@ public class environmentals : MonoBehaviour
 
     public void clicked()
     {
+        audioPlayer.Play();
         shakeDuration = 0.5f;
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
         //if there is a cat enable him and do behaviour else send message
         if(isCat)
         {
+            screenMessage.SendMessage("ShowText", "Somedthing popped out!");
             cat.SetActive(true);
             cat.SendMessage("Unpaused");
             cat.SendMessage("Clickable");
@@ -89,6 +100,10 @@ public class environmentals : MonoBehaviour
             cat.transform.parent = null;
             cat.transform.parent = newParent.transform;
             isCat = false;
+        }
+        else
+        {
+            screenMessage.SendMessage("ShowText", "There was nothing in there...");
         }
     }
 
