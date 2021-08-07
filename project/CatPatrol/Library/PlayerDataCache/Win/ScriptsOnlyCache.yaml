@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Frank
     - FrenzyBuff
     - PauseMenu
     - RandomCat
@@ -21,7 +22,6 @@ ScriptsOnlyBuild:
     - watch
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
-    - UnityEditor.U2D.Animation.SkinningCachePersistentState
     Unity.2D.Animation.Runtime.dll:
     - UnityEngine.U2D.Animation.SpriteSkin
     Unity.2D.IK.Editor.dll:
@@ -162,6 +162,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14862}
     - Class: 114
       Script: {instanceID: 14874}
+    - Class: 114
+      Script: {instanceID: 335790}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -754,7 +756,7 @@ ScriptsOnlyBuild:
     className: tutorial
   - hash:
       serializedVersion: 2
-      Hash: 77914f91f32bd095eedf95d99fecaf23
+      Hash: 2d95ed96c192e024b4eb4082fcc7c5b5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: environmentals
@@ -838,7 +840,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: a8bbb648d2f0ac688a6e821b8006da27
+      Hash: 02f89c3a324449e58117e3d513295902
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: screenShake
@@ -970,7 +972,7 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 32619c939d881c23080d613abfa799f1
+      Hash: 3aa975da9982109601e103c5e5b6ca43
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameManager
@@ -1004,8 +1006,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Samples.Runtime.dll
     namespaceName: Unity.U2D.Animation.Sample
     className: SwapPart
+  - hash:
+      serializedVersion: 2
+      Hash: c99953968cfcfa5cc91254e9aa9c1777
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Frank
   platform: 5
   scenePathNames:
   - Assets/Scenes/start.unity
   - Assets/Scenes/maIn.unity
-  playerPath: C:/Users/Eliah/Desktop/HelloCat Build/CatPatrol.exe
+  playerPath: C:/Users/Eliah/Desktop/BUILD TEST/CatPatrol.exe

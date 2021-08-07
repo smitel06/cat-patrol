@@ -157,6 +157,7 @@ public class cat : MonoBehaviour
 
             catFrenzy.SendMessage("addValue", 30);
             gameManager.SendMessage("AddToScore");
+            gameManager.SendMessage("catsLeftTaken");
             screenMessage.SendMessage("ShowText", clickMessage);
             Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
             Destroy(gameObject);

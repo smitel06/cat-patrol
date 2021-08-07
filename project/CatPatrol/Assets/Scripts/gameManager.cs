@@ -32,12 +32,17 @@ public class gameManager : MonoBehaviour
     int multiplier;
     public bool frenzyBuff;
     public Text multiplierText;
+    //cats left
+    public Text catsLeftText;
+    public int catsLeft;
+    public GameObject endGameObject;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
+        catsLeft = 31;
         gameMode = PlayerPrefs.GetInt("mode");
         //set score
         score = 0;
@@ -55,6 +60,11 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(catsLeft == 0)
+        {
+            endGame();
+        }
+
         if (!frenzyBuff)
         {
             multiplierText.enabled = false;
@@ -99,5 +109,16 @@ public class gameManager : MonoBehaviour
             
             multiplier++;
         }
+    }
+
+    public void catsLeftTaken()
+    {
+        catsLeft -= 1;
+        catsLeftText.text = catsLeft.ToString();
+    }    
+
+    public void endGame()
+    {
+        endGameObject.SetActive(true);
     }
 }

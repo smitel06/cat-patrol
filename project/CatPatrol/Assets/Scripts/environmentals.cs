@@ -92,10 +92,8 @@ public class environmentals : MonoBehaviour
         //if there is a cat enable him and do behaviour else send message
         if(isCat)
         {
-            screenMessage.SendMessage("ShowText", "Somedthing popped out!");
+            screenMessage.SendMessage("ShowText", "Something popped out!");
             cat.SetActive(true);
-            cat.SendMessage("Unpaused");
-            cat.SendMessage("Clickable");
             //detach parent and attach to cats
             cat.transform.parent = null;
             cat.transform.parent = newParent.transform;
