@@ -101,69 +101,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11556}
     - Class: 114
-      Script: {instanceID: 11564}
+      Script: {instanceID: 11654}
     - Class: 114
-      Script: {instanceID: 11838}
+      Script: {instanceID: 11928}
     - Class: 114
-      Script: {instanceID: 12054}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12244}
+      Script: {instanceID: 12334}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12642}
     - Class: 114
-      Script: {instanceID: 12710}
+      Script: {instanceID: 12800}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 12824}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 12832}
+      Script: {instanceID: 12922}
     - Class: 114
-      Script: {instanceID: 12994}
+      Script: {instanceID: 13084}
     - Class: 114
-      Script: {instanceID: 13176}
+      Script: {instanceID: 13266}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13416}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 13534}
     - Class: 114
-      Script: {instanceID: 13574}
+      Script: {instanceID: 13664}
     - Class: 114
-      Script: {instanceID: 13616}
+      Script: {instanceID: 13706}
     - Class: 114
-      Script: {instanceID: 13622}
-    - Class: 114
-      Script: {instanceID: 13642}
-    - Class: 114
-      Script: {instanceID: 13730}
+      Script: {instanceID: 13712}
     - Class: 114
       Script: {instanceID: 13732}
     - Class: 114
-      Script: {instanceID: 13812}
+      Script: {instanceID: 13820}
     - Class: 114
-      Script: {instanceID: 14058}
+      Script: {instanceID: 13822}
     - Class: 114
-      Script: {instanceID: 14156}
+      Script: {instanceID: 13902}
     - Class: 114
-      Script: {instanceID: 14356}
+      Script: {instanceID: 14148}
     - Class: 114
-      Script: {instanceID: 14406}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 14706}
+      Script: {instanceID: 14446}
     - Class: 114
-      Script: {instanceID: 14744}
+      Script: {instanceID: 14496}
     - Class: 114
-      Script: {instanceID: 14768}
+      Script: {instanceID: 14796}
     - Class: 114
-      Script: {instanceID: 14818}
+      Script: {instanceID: 14834}
     - Class: 114
-      Script: {instanceID: 14856}
+      Script: {instanceID: 14858}
     - Class: 114
-      Script: {instanceID: 14868}
+      Script: {instanceID: 14908}
     - Class: 114
-      Script: {instanceID: 14880}
+      Script: {instanceID: 14946}
+    - Class: 114
+      Script: {instanceID: 14958}
+    - Class: 114
+      Script: {instanceID: 14970}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,23 +204,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11556}
     - Class: 114
-      Script: {instanceID: 11838}
+      Script: {instanceID: 11928}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12642}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12802}
     - Class: 114
-      Script: {instanceID: 13326}
+      Script: {instanceID: 13416}
     - Class: 114
-      Script: {instanceID: 14142}
+      Script: {instanceID: 14232}
     - Class: 114
-      Script: {instanceID: 14156}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 14744}
+      Script: {instanceID: 14834}
     - Class: 114
-      Script: {instanceID: 14818}
+      Script: {instanceID: 14908}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -756,7 +756,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: c54c749f2c87cbeca3e3ad91b81204b8
+      Hash: 923f910399e9a0186456d8f01ca838bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: tutorial
@@ -768,7 +768,7 @@ ScriptsOnlyBuild:
     className: environmentals
   - hash:
       serializedVersion: 2
-      Hash: 0cd21a22855ac164a191876a03134450
+      Hash: 41c52df8d14e691f85298e48eccdd8a9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FrenzyBuff

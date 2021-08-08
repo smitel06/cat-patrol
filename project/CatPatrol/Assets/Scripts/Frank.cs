@@ -25,15 +25,17 @@ public class Frank : MonoBehaviour
     public Texture2D defaultTexture;
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotspot = Vector2.zero;
+    //bool 
+    bool canClick;
 
     // Start is called before the first frame update
     void OnEnable()
     {
+        canClick = true;
         //time to wait until end game runs
         waitTime = 5f;
 
-        
-
+        //slider values
         maxValue = 30;
         minValue = 0;
         currentValue = minValue;
@@ -68,6 +70,7 @@ public class Frank : MonoBehaviour
             screenMessage.SendMessage("ShowText", "Frank found you!");
             endGame = true;
             timeToWait = waitTime + Time.time;
+            canClick = false;
             
         }
     }
@@ -79,13 +82,15 @@ public class Frank : MonoBehaviour
 
     private void OnMouseOver()
     {
-
-        //set cursor for mouse
-        Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
-
-        if (Input.GetMouseButtonDown(0))
+        if (canClick)
         {
-            clicked();
+            //set cursor for mouse
+            Cursor.SetCursor(cursorTexture, hotspot, cursorMode);
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                clicked();
+            }
         }
 
     }

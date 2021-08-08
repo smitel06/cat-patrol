@@ -150,6 +150,7 @@ public class RandomCat : MonoBehaviour
     {
         if (m_renderer.sprite == sprite6)
         {
+            catFrenzy.SendMessage("DestroyAllRnds");
             Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
             //you hit the pug gameover
             catFrenzy.GetComponent<FrenzyBuff>().buffOn = false;

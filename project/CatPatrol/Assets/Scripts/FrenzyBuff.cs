@@ -21,6 +21,8 @@ public class FrenzyBuff : MonoBehaviour
     //timer for raining cats
     public float rainingCatTimer;
     float timeToWait;
+    //stuffy
+    public GameObject[] spawns;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,7 @@ public class FrenzyBuff : MonoBehaviour
 
     private void Update()
     {
+        spawns = GameObject.FindGameObjectsWithTag("spawns");
         buffSlider.value = currentValue;
 
         //every second buff is over 0 tick down 1
@@ -69,8 +72,10 @@ public class FrenzyBuff : MonoBehaviour
             
         }
         
-        if(buffOn && currentValue == 0)
+        if(buffOn && currentValue <= 0)
         {
+            currentValue = 0;
+            DestroyAllRnds();
             CancelInvoke();
             buffOn = false;
             tickDown = true;
@@ -157,9 +162,16 @@ public class FrenzyBuff : MonoBehaviour
             Vector2 spawnPosition = new Vector2(spawnX, spawnY);
             Instantiate(randomCat, spawnPosition, Quaternion.identity);
         
-
-
     }
 
-    
+    public void DestroyAllRnds()
+    {
+        //find all random cats and destroy
+        //tag = spawns
+        
+
+        foreach (GameObject spawn in spawns)
+            Destroy(spawn);
+    }
+
 }

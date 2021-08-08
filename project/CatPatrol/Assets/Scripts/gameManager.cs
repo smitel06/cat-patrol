@@ -36,12 +36,13 @@ public class gameManager : MonoBehaviour
     public Text catsLeftText;
     public int catsLeft;
     public GameObject endGameObject;
-
+    bool canPause;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        canPause = true;
         catsLeft = 31;
         gameMode = PlayerPrefs.GetInt("mode");
         //set score
@@ -79,7 +80,7 @@ public class gameManager : MonoBehaviour
             multiplierText.text = "Multiplier x" + multiplier;
         }
         
-        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false && tutorial == null)
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseMenu.activeSelf == false && tutorial == null && canPause)
         {
             //open pause menu
             pauseMenu.SetActive(true);
@@ -119,6 +120,8 @@ public class gameManager : MonoBehaviour
 
     public void endGame()
     {
+        canPause = false;
+        catParent.SendMessage("Pause");
         endGameObject.SetActive(true);
     }
 }

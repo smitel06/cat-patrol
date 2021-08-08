@@ -12,7 +12,9 @@ public class tutorial : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotspot = Vector2.zero;
     //tutorial go
-    public GameObject tutorialScreen;
+    public GameObject tutorialScreen1;
+    public GameObject tutorialScreen2;
+    public GameObject tutorialScreen3;
     //cat parent
     public GameObject catParent;
 
@@ -37,7 +39,7 @@ public class tutorial : MonoBehaviour
         //starts the game
         Time.timeScale = 1;
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
-        Destroy(tutorialScreen);
+        Destroy(gameObject);
     }
 
     public void mouseOver()
@@ -49,5 +51,17 @@ public class tutorial : MonoBehaviour
     public void mouseExit()
     {
         Cursor.SetCursor(defaultTexture, hotspot, cursorMode);
+    }
+
+    public void SecondScreen()
+    {
+        tutorialScreen1.SetActive(false);
+        tutorialScreen2.SetActive(true);
+    }
+
+    public void ThirdScreen()
+    {
+        tutorialScreen2.SetActive(false);
+        tutorialScreen3.SetActive(true);
     }
 }
