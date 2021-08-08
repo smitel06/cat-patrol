@@ -94,6 +94,7 @@ public class environmentals : MonoBehaviour
         {
             screenMessage.SendMessage("ShowText", "Something popped out!");
             cat.SetActive(true);
+            cat.SendMessage("Clickable");
             //detach parent and attach to cats
             cat.transform.parent = null;
             cat.transform.parent = newParent.transform;

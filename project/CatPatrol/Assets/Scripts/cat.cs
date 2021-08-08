@@ -49,14 +49,10 @@ public class cat : MonoBehaviour
         // get animator attached to this object
         m_Animator = gameObject.GetComponent<Animator>();
         //set time to wait in between deciding between movement options
-        
-
+   
         //starting spot
         randomRot = Random.Range(1, 361);
         rotator.transform.Rotate(0f, randomRot, 0f, Space.World);
-
-
-
 
         //saet movement bools
         idle = true;
